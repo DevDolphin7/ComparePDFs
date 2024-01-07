@@ -1,0 +1,93 @@
+Welcome to the help file for ComparePDFs!
+
+----------------------------------------
+Overview:
+
+This software is designed to compare two PDF files and identify differences between them.
+Whether you're working with document revisions, textual changes, or other content modifications, this tool can assist you in understanding the variations between two PDF documents.
+The output details information on page alignment; added or removed pages; content changes on matching pages; and more!
+
+
+----------------------------------------
+Getting Started:
+
+1. Select Old PDF
+Click the "Select Old PDF" button to choose the first PDF file. This file will be considered the baseline for comparison.
+
+2. Select New PDF
+Click the "Select New PDF" button to choose the second PDF file. This file will be compared against the baseline to identify changes.
+
+3. Preview
+Use the "Preview" button to visualize a randomly selected page from one of the loaded PDFs. This feature helps you understand how the application perceives the document, especially after cropping.
+
+4. Compare
+The "Compare" button turns green when both Old and New PDF files are loaded. Click it to initiate the comparison process and identify differences between the two documents.
+Once clicked, it will ask you where you would like to save the output file. Then the comparison begins! A progress bar shows you the progress.
+When the progress bar has disappeared, the results will open in your native ".txt" file app.
+
+
+----------------------------------------
+Tips:
+
+ - The "Compare" button turns green when both PDF files are loaded and ready for comparison.
+
+ - The "Preview" button shows a random page from one of the PDFs, cropped according to your settings.
+
+ - To change the initial folder shown on app launch when selecting files, load a file then navigate to settings and click "Save As Default".
+
+ - To change the initial output folder shown on app launch when you click compare, complete a comparison then navigate to settings and click "Save As Default".
+
+ - If something isn't functioning, it will tell you why after 3 consecutive attempts to use it.
+
+ - To load the "default" values, you can delete "config.ini" from the install folder and start the software. To avoid the error message on starting the app, go to settings and click "Save As Default".
+
+ - Regarding the Text Comparison Accuracy setting during testing, fast is quite accurate!
+
+ - Regarding speed, this is dependant on your computer! But during testing comparing took 5-6 times longer than loading.
+
+ - The file "debug.log" contains a log of activity and documents any issues that may arise while using the app.
+
+
+----------------------------------------
+Further Information:
+
+1. Settings
+Click on the "Settings" button to access the configuration menu. Here, you can adjust various settings such as:
+
+ - Cropping margins: useful for removing automated headers / footers detailing the document revion numbers.
+
+ - Portrait / Landscape: this is only used within settings to demonstrate the margins being applied. The app automatically detects portrait or landscape pages.
+
+ - Page Similarity Threshold: a ratio between 0-1 that defines if the compared page is similar enough to a page in the old document to be considered "the same" page (even if slightly modified).
+
+ - Text Similarity Threshold: a ratio between 0-1 that defines if the text read by OCR should be considered genuine content change, or if the OCR misread a character. Bullet points are sometimes misread as "o" or "0" for example.
+
+ - Text Comparison Accuracy: either fast or accurate.
+
+ - Save As Default: this will save the current settings and apply them the next time you open the app.
+
+
+2. How does it compare them?
+It converts each page into and image and uses local Optical Character Recognition (OCR) to obtain the text in each page through the python "pytesseract" module.
+
+It then reconstructs the text into sentences using the python "SpaCy" module.
+
+Then it compares which pages are similar enough to be considered "the same" page even with small adjustments.
+
+Then it compares, per page, which text is dissimilar enough to be considered genuine content change or a misread from the OCR (for exmaple, a bullet point read as a "o").
+
+Both Similarity Threshold options are compared against the result of an output (the similarity ratio) from the SequenceMatcher class in the python "difflib" module.
+
+The Text Comparison Accuracy affects the use of "quick_ratio" or "ratio" from the SequenceMatcher class in the python "difflib" module.
+
+It then saves the output as "Differences.txt" in the chosen output folder.
+
+All content considered an OCR misread as well as the settings used are documented at the bottom of the output file.
+
+
+----------------------------------------
+Support:
+
+For any questions, issues, or feedback, feel free to send the "debug.log" file and get in touch on GitHub: https://github.com/DevDolphin7/ComparePDFs
+
+Thank you for using ComparePDFs! I hope it enhances your document comparison experience.

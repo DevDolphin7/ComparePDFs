@@ -1,0 +1,75 @@
+Files under comparison:
+Old file: C:/Users/danol/Documents/Coding/CMcontentExtractor/Examples/1 Example Baseline.pdf
+New file: C:/Users/danol/Documents/Coding/CMcontentExtractor/Examples/6 Modified and Added Page.pdf
+
+------------------------------------------------------------
+
+Page alignment information:
+|  Old	|  New	|
+|1	|1	|
+|2	|2	|
+|3	|3	|
+|None	|4	| <-- New document page 4 added  		Best page similarity ratio: 0.11
+
+
+------------------------------------------------------------
+
+The following pages were added to the new document: 
+Page 4
+
+There are no removed pages to review in the old document.
+
+------------------------------------------------------------
+
+Compared page content:
+List of compared pages (old,new): [(1, 1), (2, 2), (3, 3)]
+Old document page 1 to new document page 1:
+- Finley's Journey Once upon a time, in the vibrant and crystal-clear waters of the Coral Bay, there lived a spirited and joyful dolphin named Finley.
++ Finley's Torment Once upon a time, in the murky and foreboding waters of the Shadowed Abyss, there lived a spirited and joyful dolphin named Finley.
+- At sunrise, Finley would join his pod in the daily dance through the corals, weaving between the dazzling schools of fish.
++ At the stroke of midnight, Finley would join his pod in the daily dance through the corals, weaving between the dazzling schools of fish.
+- Life in Coral Bay was harmonious, and Finley's heart brimmed with contentment. 
++ the Shadowed Abyss was harmonious, and Finley's heart brimmed with contentment. 
+- One fateful day, a massive storm swept through Coral Bay, bringing with it roaring waves and turbulent currents.
++ One fateful day, a massive storm swept through the Shadowed Abyss, bringing with it roaring waves and turbulent currents.
+
+
+Old document page 2 to new document page 2:
+- An old sea turtle named Sage imparted wisdom, "In the face of adversity, embrace the currents of change, young Finley.
++ A brooding clownfish named Shade whispered "In the face of adversity, embrace the currents of change, young Finley.
++ " a aeeY ra ae d AOS ; 4 a ‘ ; 4 a Ss ane ae 3 
+- " Eventually, the storm passed, and the waters calmed.
++ Tee RE a Eventually, the storm passed, and the waters calmed.
+
+
+Old document page 3 to new document page 3:
+- One day, while swimming through the familiar currents of Coral Bay, Finley heard familiar calls.
++ One day, while swimming through the familiar currents of the Shadowed Abyss, Finley heard familiar calls.
+- And so, the waters of Coral Bay sparkled once again, reflecting the resilience, wisdom, and joy of Finley, the dolphin who turned trials into triumphs, and storms into stories of hope. 
++ And so, the waters of the Shadowed Abyss shimmered once again, reflecting the resilience, wisdom, and joy of Finley, the dolphin who turned trials into triumphs, and storms into stories of hope. 
+
+
+
+
+------------------------------------------------------------
+
+Rejected changes (text similarity above the threshold 0.95) FIO:
+Old document page 3 to new document page 3:
++ His pod, battered but alive, had also weathered the storm.
+- His pod, battered but alive, had also weathered the storm. 
+^^^ Similarity ratio: 0.9914529914529915
+
+
+
+
+------------------------------------------------------------
+
+Settings used:
+Page similarity threshold (ratio 0 to 1) = 0.8	<-- If the page is more similar than this ratio it will assume it's the same page, otherwise it's an added or removed page.
+    
+Text similarity threshold (ratio 0 to 1) = 0.95	<-- If the text is more similar than this ratio it will assume it's misread the text, otherwise it's a valid change to the documents content.
+    
+Text comparison accuracy (Boolean) = False	<-- False = Fast, True = Slower but more accurate
+    
+Cropped area (LH width, LH height, RH width, RH height: (0, 0, 1654, 2339)  <-- The pixels used to define the size of the page to scan for text, the top left corner is (0,0).
+
