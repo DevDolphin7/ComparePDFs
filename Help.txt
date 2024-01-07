@@ -88,6 +88,8 @@ All content considered an OCR misread as well as the settings used are documente
 ----------------------------------------
 Support:
 
-For any questions, issues, or feedback, feel free to send the "debug.log" file and get in touch on GitHub: https://github.com/DevDolphin7/ComparePDFs
+For any questions, issues, or feedback, feel free to send the "debug.log" file and get in touch on:
+Email: DevDolphin7@outlook.com
+GitHub: https://github.com/DevDolphin7/ComparePDFs
 
 Thank you for using ComparePDFs! I hope it enhances your document comparison experience.

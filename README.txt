@@ -1,6 +1,11 @@
 For help, see "Help.txt"! Or launch the app, click "Settings" and then "Help"
 
 
+For any questions, issues, or feedback, feel free to send the "debug.log" file and get in touch on:
+Email: DevDolphin7@outlook.com
+GitHub: https://github.com/DevDolphin7/ComparePDFs
+
+
 The code requires the following packages to run, these are included in the install file:
 - pytersseract Version 0.3.10
 - SpaCy Version 3.7.2
